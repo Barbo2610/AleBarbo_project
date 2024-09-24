@@ -1,6 +1,6 @@
 <template>
     <div class="container mt-5">
-        <h1 class="display-4 text-center">Lista de países</h1>
+        <h1 class="display-4 text-center">Lista de Países</h1>
         <div class="row justify-content-end">
             <div class="col-2">
                 <a href="/Pais">
@@ -29,7 +29,7 @@
                 <tr v-for="(Pais, index) in Paises" :key = "index">
                     <td> {{Pais.nombre}}</td>
                     <td> {{Pais.continente}}</td>
-                    <td> {{Pais.Idioma}}</td>
+                    <td> {{Pais.idioma}}</td>
                     <td>
                         <button class="btn btn-secondary btn-sm" @click="editarPais(index)">Editar</button>
                         <button class="btn btn-danger btn-sm" @click="eliminarPais(index)">Eliminar</button>
