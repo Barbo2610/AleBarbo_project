@@ -1,7 +1,16 @@
 <template>
     <div class="container mt-5">
         <h1 class="display-4 text-center">Lista de países</h1>
-        
+        <div class="row justify-content-end">
+            <div class="col-2">
+                <a href="/Pais">
+                    <button type="button" class="btn
+                    btn-outline-secondary float-right">
+                    Agregar país
+                    </button>
+                </a>
+            </div>
+        </div>
         <table
         class="table is-bordered is-striped is-narrow is-hoverable
         is-fullwidth"
@@ -17,10 +26,10 @@
             </thead>
 
             <tbody>
-                <tr v-for="(pais, index) in paises" :key = "index">
-                    <td> {{pais.nombre}}</td>
-                    <td> {{pais.continente}}</td>
-                    <td> {{pais.Idioma}}</td>
+                <tr v-for="(Pais, index) in Paises" :key = "index">
+                    <td> {{Pais.nombre}}</td>
+                    <td> {{Pais.continente}}</td>
+                    <td> {{Pais.Idioma}}</td>
                     <td>
                         <button class="btn btn-secondary btn-sm" @click="editarPais(index)">Editar</button>
                         <button class="btn btn-danger btn-sm" @click="eliminarPais(index)">Eliminar</button>
@@ -34,12 +43,13 @@
 
 
 <script>
+import axios from "axios";
 export default {
     name: "ListaPaises",
     
     data() {
         return {
-            paises: [
+            Paises: [
                 { nombre: "Costa Rica", continente: "América", Idioma: "Español" },
                 { nombre: "Japón", continente: "Asia", Idioma: "Japonés" },
                 { nombre: "Corea del Sur", continente: "Asia", Idioma: "Coreano" },
@@ -51,8 +61,17 @@ export default {
     },
     methods: {
         eliminarPais(index) {
-            this.paises.splice(index, 1);
+            this.Paises.splice(index, 1);
         },
+        obtenerTareas() {
+            axios.get("https://localhost:7280/api/Pais", {timeout: 5000}).then(
+            (response) => {
+                this.Paises = response.data;
+            });
+        },
+    },
+    created: function () {
+        this.obtenerTareas();
     },
 };
 </script>
