@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab5_backend", "lab5_backend.csproj", "{2389A59E-75ED-493D-90DB-C2CCDAF9E799}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIAutomationTests", "..\UIAutomationTests\UIAutomationTests.csproj", "{7C921BFD-941C-48CA-8E11-4529C78ECF26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2389A59E-75ED-493D-90DB-C2CCDAF9E799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2389A59E-75ED-493D-90DB-C2CCDAF9E799}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2389A59E-75ED-493D-90DB-C2CCDAF9E799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C921BFD-941C-48CA-8E11-4529C78ECF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C921BFD-941C-48CA-8E11-4529C78ECF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C921BFD-941C-48CA-8E11-4529C78ECF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C921BFD-941C-48CA-8E11-4529C78ECF26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
